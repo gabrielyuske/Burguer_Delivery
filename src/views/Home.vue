@@ -1,10 +1,13 @@
 <template>
+<div>
   <Banner />   
-  <div class="main_container">
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <h1>HOME</h1>
-    <BurgerForm />
-  </div>
+    <div class="main_container">
+      <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+      <h1>Monte o seu BURGER</h1>
+      <BurgerForm />
+    </div>
+</div>
+  
 </template>
 
 <script>

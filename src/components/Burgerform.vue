@@ -1,6 +1,6 @@
 <template>
   <div id="todo-form">
-      <p>Components de Mensagens</p>
+      <Message :msg="msg" v-show="msg" />
       <div>
           <form id="burger-fom" @submit="createBurger">
               <div class="input-container">
@@ -38,8 +38,12 @@
 </template>
 
 <script>
+import Message from "./Message.vue"
 export default {
     name:"BurgerForm",
+    components:{
+        Message,
+    },
     data(){
         return {
             breads: null,
@@ -85,6 +89,10 @@ export default {
             });
             const res = await req.json();
             // console.log(res);
+            this.msg = `Pedido N.${res.id} Enviado com Successo`;
+
+            // apos 3min depois de enviar o pedido a msg apaga
+            setTimeout(() => this.msg = "", 3000);
             
             // CLEAR 
             this.nome = "";
@@ -106,7 +114,6 @@ export default {
         margin: 0 auto;
         align-content: center;
         display: inline-block;
-        
     }
     #todo-form{
         margin: 0 auto;
@@ -115,6 +122,8 @@ export default {
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
+        align-items: center;
+        /* margin-left: center; */
     }
     label{
         font-weight: bold;
@@ -122,6 +131,7 @@ export default {
         color: #222;
         padding: 6px 10px;
         border-left: 4px solid #FCBA03;
+        
     }
     input,select{
         padding: 5px 10px;
@@ -129,10 +139,11 @@ export default {
     }
     #opcionais-container{
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap;     
     }
     #opcionais-title{
         width: 100%;
+        align-content: center;
     }
 
     .checkbox-container{
@@ -165,7 +176,8 @@ export default {
     }
     .submit-btn:hover{
         background-color: transparent;
-        color: #222;
+        color: darkgreen;
+        border: 4px solid;
     }
         
         

@@ -28,7 +28,11 @@ export default {
   box-sizing: border-box;
 }
 .main_container{
-  margin: 50px;
+  margin: 0 auto;
+  /* padding: auto; */
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   min-height: 345px;
 }
 
