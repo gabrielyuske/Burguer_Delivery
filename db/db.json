@@ -71,10 +71,6 @@
     {
       "id": 2,
       "tipo": "Em produção"
-    },
-    {
-      "id": 3,
-      "tipo": "Finalizado"
     }
   ],
   "burgers": [
@@ -86,7 +82,7 @@
         "Tomate",
         "Pepino"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 1
     },
     {
@@ -98,16 +94,8 @@
         "Cheddar",
         "Tomate"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 2
-    },
-    {
-      "nome": "bruno",
-      "carne": "",
-      "pao": "Italiano Branco",
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 3
     }
   ]
 }
